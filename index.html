@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday.exe</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23fff'/%3E%3Cpath d='M18 31h28v18H18z' fill='%23fff' stroke='%23000' stroke-width='3'/%3E%3Cpath d='M18 31h28v7c-4 0-4 4-8 4s-4-4-8-4-4 4-8 4-4-4-4-4z' fill='%23000'/%3E%3Cpath d='M30 16h4v12h-4z' fill='%23000'/%3E%3Cpath d='M32 9c4 4 4 8 0 10-4-2-4-6 0-10z' fill='%23000'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="screen screen-terminal is-active" id="intro" aria-labelledby="intro-title">
+        <div class="terminal-shell">
+          <p class="terminal-kicker" id="intro-title">SYSTEM ALERT</p>
+          <div class="terminal-output" id="terminalOutput" aria-live="polite"></div>
+          <button class="button button-terminal is-hidden" id="continueButton" type="button">
+            Continue
+          </button>
+        </div>
+      </section>
+
+      <section class="screen screen-light" id="verification" aria-labelledby="verification-title">
+        <div class="plain-box">
+          <p class="eyebrow">Security Verification Required</p>
+          <h1 id="verification-title">Only the birthday boy can continue.</h1>
+          <form class="verification-form" id="verificationForm">
+            <p class="question" id="accessCodeQuestion">What's the place where we had sex for the first time?</p>
+            <div class="code-entry" aria-labelledby="accessCodeQuestion">
+              <input class="code-slot" type="password" inputmode="numeric" maxlength="1" autocomplete="off" />
+              <input class="code-slot" type="password" inputmode="numeric" maxlength="1" autocomplete="off" />
+              <input class="code-slot" type="password" inputmode="numeric" maxlength="1" autocomplete="off" />
+              <input class="code-slot" type="password" inputmode="numeric" maxlength="1" autocomplete="off" />
+            </div>
+            <input id="accessCode" name="accessCode" type="hidden" aria-describedby="verificationMessage" />
+            <button class="button" type="submit">Unlock</button>
+          </form>
+          <p class="status-message" id="verificationMessage" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="screen screen-light" id="letter" aria-labelledby="letter-title">
+        <article class="plain-box letter-copy">
+            <p class="eyebrow">Birthday.exe opened</p>
+            <h1 id="letter-title">Happy Birthday.</h1>
+            <p>
+              Happy 23rd Birthday Bb, I'm genuently happy for your existence in this world, and your birthday is a reminder of how lucky the world has been to have you for 23 years (and for me, thankfully, almost 3). 
+            </p>
+            <p>
+              You are handsome, funny, kind, and frustrating sometime(which only adds to the fun). Am I really this lovable too? Or how did I ever deserve you? Whenever i feel like my world is about to collapse, you're always able to put it back together in the kindest and gentlest way. I made this little birthday bug for you because a fancy dinner can't express my love for you fully, I want this little website to remind you how special you are.
+            </p>
+            <p>
+              Accept this official birthday message: I am happy you exist,
+              and I am even happier I get to celebrate you.
+            </p>
+            <button class="button" id="letterNextButton" type="button">Next</button>
+        </article>
+      </section>
+
+      <section class="screen screen-light" id="rewards" aria-labelledby="rewards-title">
+        <div class="plain-box rewards-layout">
+          <div class="rewards-copy">
+            <p class="eyebrow">Unlocked file</p>
+            <h1 id="rewards-title">Birthday Rewards</h1>
+            <div class="checklist" aria-label="Birthday rewards checklist">
+              <label class="check-row">
+                <input type="checkbox" value="Dinner" />
+                <span>Nicey Icey Dinner Date</span>
+              </label>
+              <label class="check-row">
+                <input type="checkbox" value="Cake" />
+                <span>Nicey Cakey</span>
+              </label>
+              <label class="check-row">
+                <input type="checkbox" value="Great Sex" />
+                <span>Kinky iky Sex</span>
+              </label>
+            </div>
+          </div>
+          <div class="selection-box" id="selectionBox" aria-live="polite">
+            <p>Select anything you want.</p>
+          </div>
+          <button class="button" id="rewardsSubmitButton" type="button">Submit</button>
+        </div>
+      </section>
+
+      <section class="screen screen-finale" id="finale" aria-label="Happy birthday finale">
+        <img
+          class="finale-gif"
+          src="assets/happy-birthday-old-sport.gif"
+          alt="Happy Birthday Old Sport"
+        />
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
